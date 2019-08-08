@@ -1,8 +1,6 @@
-html, body {
-	font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-}
+@import './minimalreset.css';
 
-h1 {
-	text-align: center;
+.banner__icon{
+		width: 100%;
+		height: auto;
 }

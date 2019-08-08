@@ -3489,6 +3489,11 @@ globby@^7.1.1:
     pify "^3.0.0"
     slash "^1.0.0"
 
+goober@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/goober/-/goober-1.3.1.tgz#cef813c40982aadd14dab2ca664c1b8a7113ad88"
+  integrity sha512-EzCmQmb7/K2AGylL4YbiDCugUyCHFlLLH7kxqOnl7TZtq6T9BSnQoY47qWBXUlMfxMxD3oSlV4fKwipYUq5zaw==
+
 got@^6.7.1:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/got/-/got-6.7.1.tgz#240cd05785a9a18e561dc1b44b41c763ef1e8db0"
@@ -6013,7 +6018,7 @@ preact-cli@^2.0.0:
     which "^1.2.14"
     yargs "^8.0.1"
 
-preact-compat@^3.14.3, preact-compat@^3.17.0:
+preact-compat@^3.14.3:
   version "3.19.0"
   resolved "https://registry.yarnpkg.com/preact-compat/-/preact-compat-3.19.0.tgz#a71457b6a3bf051690a4411603bc2085aa061c2f"
   integrity sha512-f83A4hIhH8Uzhb9GbIcGk8SM19ffWlwP9mDaYwQdRnMdekZwcCA7eIAbeV4EMQaV9C0Yuy8iKgBAtyTKPZQt/Q==
@@ -6054,7 +6059,12 @@ preact-transition-group@^1.1.1:
   resolved "https://registry.yarnpkg.com/preact-transition-group/-/preact-transition-group-1.1.1.tgz#f0a49327ea515ece34ea2be864c4a7d29e5d6e10"
   integrity sha1-8KSTJ+pRXs406ivoZMSn0p5dbhA=
 
-preact@^8.1.0, preact@^8.2.1:
+preact@^10.0.0-rc.1:
+  version "10.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.0.0-rc.1.tgz#bae4419f8e289c327504d4ee6e734c377983548c"
+  integrity sha512-DyG8ySCbrQZ8w4cSyxnofM6yH/hzyYLHmIrE3xL1FjSCX4DpvVmP7DTpkV535FSQX0d2zOscb7DCIY+crBtxow==
+
+preact@^8.1.0:
   version "8.5.1"
   resolved "https://registry.yarnpkg.com/preact/-/preact-8.5.1.tgz#3a86cf5f3d4f6eb3349fa1f106ad59756c2af0e3"
   integrity sha512-YVnCgcboxGrorFVIPjViqkEPOtfYVDxn5GOJuXHQZiOty+JOw7A+1xJytv/mb1O2QIIRC0SyT+kapA7Wj3jdZA==
