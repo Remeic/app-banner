@@ -1,7 +1,7 @@
 {
-  "private": true,
+  "private": false,
   "name": "app-banner",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
@@ -29,8 +29,6 @@
     "preact": "^10.0.0-rc.1",
     "preact-render-to-string": "^4.1.0"
   },
-  "source": "index.js",         
-  "main": "assets/index.js",        
-  "module": "assets/index.mjs",    
-  "unpkg": "assets/index.umd.js"
+  "source": "BannerManager.js",         
+  "main": "BannerManager.js"
 }
