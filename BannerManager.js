@@ -1,25 +1,26 @@
 import Banner from './Banner';
-import { h } from 'preact';
-import { useEffect,useState  } from "preact/hooks";
+import { useEffect,useState  } from 'preact/hooks';
 
 function BannerManager() {
-	const [isBannerVisible, setBannerVisible] = useState(false);
+	const initialVisibilityBanner = getInitialStateVisibility;
+	const [isBannerVisible, setBannerVisible] = useState(initialVisibilityBanner);
+	 
 	useEffect(() => {
-		checkIfShowBanner();
-		console.log(isBannerVisible);
+		saveVisibleState(isBannerVisible);
 	},[isBannerVisible]);
 	
-	return (isBannerVisible && <Banner p={setBannerVisible} />);
+	return (isBannerVisible && <Banner dismiss={setBannerVisible} />);
 
-	function checkIfShowBanner(){
-		let appBannerSettings = () => window.localStorage.getItem('showAppBanner');
-		setBannerVisible(appBannerSettings);
-		console.log(isBannerVisible)
-		console.log("ldldld")
+	function saveVisibleState(visibility){
+		window.localStorage.setItem('showAppBanner',visibility);
 	}
 }
 
-
+function getInitialStateVisibility(){
+	let visibility = window.localStorage.getItem('showAppBanner') || true;
+	if (visibility === 'false') visibility = false;
+	return visibility;
+}
 
 function getMobileOperatingSystem() {
 	let result;
