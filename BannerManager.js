@@ -1,7 +1,7 @@
 import Banner from './Banner';
 import { useEffect,useState  } from 'preact/hooks';
 
-function BannerManager() {
+function BannerManager({ children, ...props }) {
 	const initialVisibilityBanner = getInitialStateVisibility;
 	const [isBannerVisible, setBannerVisible] = useState(initialVisibilityBanner);
 	 
@@ -9,7 +9,7 @@ function BannerManager() {
 		saveVisibleState(isBannerVisible);
 	},[isBannerVisible]);
 	
-	return (isBannerVisible && <Banner dismiss={setBannerVisible} />);
+	return (isBannerVisible && <Banner dismiss={setBannerVisible} content={props.content}/>);
 
 	function saveVisibleState(visibility){
 		window.localStorage.setItem('showAppBanner',visibility);
@@ -22,31 +22,4 @@ function getInitialStateVisibility(){
 	return visibility;
 }
 
-function getMobileOperatingSystem() {
-	let result;
-	const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-	if (/android/i.test(userAgent)) {
-		result = "android";
-	}
-	if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-		result = "ios";
-	}
-	return result;
-}
-
-function chooseCorrectLink(iosLink, androidLink) {
-	let result;
-	switch (getMobileOperatingSystem()) {
-		case "android":
-			result = androidLink;
-			break;
-		case "ios":
-			result = iosLink;
-			break;
-		default:
-			break;
-	}
-	return result;
-}
-
-export {BannerManager} ;
+export default BannerManager;
